@@ -15,6 +15,8 @@ class Comment(models.Model):
 	post=models.ForeignKey(Post)
 	def first_60(self):
 		return self.body[:60]
+	def __unicode__(self):
+		return self.body
 class CommentInLine(admin.TabularInline):
 	model=Comment
 class PostAdmin(admin.ModelAdmin):
