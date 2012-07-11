@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<ul>
+<li>{{detail.title}}</li>
+<li>{{detail.body}}</li>
+<li>{{detail.date_created}}</li>
+<li>{{detail.date_created}}</li>
+</ul>
+ {% for com in comment %}
+<li>{{com.author}}</li>
+<li>{{com.body}}</li>
+<li>{{com.post}}</li>
+<li>{{com.date_created}}</li>
+<li>{{com.date_updated}}</li>
+<p></p>
+{% endfor %}
+{% endblock %}
+

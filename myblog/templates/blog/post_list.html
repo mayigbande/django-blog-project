@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% for a in list %}
+<a href='{{a.id}}/true'>{{a.title}}</a>
+<ul>
+<li>{{a.date_created}}</li>
+<li>{{a.date_updated}}</li>
+<li>{{a.body}}</li>
+</ul>
+{% endfor %}
+{% endblock %}
